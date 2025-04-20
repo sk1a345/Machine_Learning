@@ -79,13 +79,11 @@ x_train, x_test, y_train,y_test = train_test_split(x,y,test_size=0.2,random_stat
 
 # Training the model:
 from sklearn.linear_model import LinearRegression
-
-
 lr = LinearRegression()
 lr.fit(x_train,y_train)
 y_pred =lr.predict(x_test)
 
-print("Accuracy score: ",lr.score(x_test,y_test)) #It must be called with the test features (X) and the true values (y), so it can internally call .predict(X_test) and compare it to y_test.
+print("score: ",lr.score(x_test,y_test)) #It must be called with the test features (X) and the true values (y), so it can internally call .predict(X_test) and compare it to y_test.
 
 # print(lr.coef_) #m1 =21427.80031224  m2 =-1161.04337871
 # print(lr.intercept_) # c =43328.14289284563
