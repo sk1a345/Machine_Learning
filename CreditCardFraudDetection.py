@@ -29,7 +29,7 @@ print(conf_matrix)
 class_report = classification_report(y_test,y_pred)
 print("\nClassification Report: ")
 print(class_report)
-score  = rf_model.score(x_train,y_train)
+score  = rf_model.score(x_train,y_train) 
 print("Accuracy score: ",score)
 
 #➡️➡️➡️Applying Sampling Techniques(RandomeOverSampler)
