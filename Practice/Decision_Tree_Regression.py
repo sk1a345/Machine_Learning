@@ -43,7 +43,7 @@ x_train,x_test,y_train,y_test = train_test_split(x,y,test_size=0.2,random_state=
 # Training the model using the Decison tree regression algo:
 from sklearn.tree import DecisionTreeRegressor
 
-dr = DecisionTreeRegressor()
+dr = DecisionTreeRegressor(max_depth=3)
 dr.fit(x_train,y_train)
 
 y_pred = dr.predict(x_test)
@@ -55,7 +55,9 @@ print("Mean absolute error: ",mean_absolute_error(y_test,y_pred))
 print("Mean squared erro: ",mean_squared_error(y_test,y_pred))
 print("Root mean square error : ",np.sqrt(mean_squared_error(y_test,y_pred)))
 print("R2 score: ",r2_score(y_test,y_pred))
-print("Score: ",dr.score(x_test,y_test))
+print("Score: ",dr.score(x_test,y_test)*100," %")
+# Checking the overfitting:
+print("Score(train): ",dr.score(x_train,y_train)*100," %")
 
 # Plotting the tree:
 import matplotlib.pyplot as plt
