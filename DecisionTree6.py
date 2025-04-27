@@ -21,7 +21,7 @@ print(accuracy)
 
 # UserInput:
 age = float(input("Enter your age: "))
-income = float(input("Enter income: "))
+income = float(input("Enter your income: "))
 education = float(input("Enter education level(1-12th, 2-graduate, 3-Masters, 4-researcher): "))
 
 user_input = np.array([[age,income,education]])
